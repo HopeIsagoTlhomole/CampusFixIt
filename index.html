@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BAC School Issues Reporting System" />
+  <title>BAC Connect | School Issues Reporting</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="BAC Connect home">
+      <img src="logo.svg" alt="BAC Connect logo" class="brand-logo" />
+      <span><strong>BAC</strong><small>CONNECT</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a href="#home" class="nav-link active">Main Menu</a>
+      <a href="#categories" class="nav-link">Categories</a>
+      <a href="#report" class="nav-link">Report a Problem</a>
+      <a href="#my-reports" class="nav-link">Track Reports</a>
+      <a href="#feedback" class="nav-link">Feedback</a>
+    </nav>
+    <label class="role-switch">
+      <span class="sr-only">Choose demo user role</span>
+      <select id="userRole" aria-label="Choose user role">
+        <option value="Student">Student</option>
+        <option value="SRC">SRC</option>
+        <option value="Management">School Management</option>
+      </select>
+    </label>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> YOUR VOICE. OUR CAMPUS.</span>
+        <h1>A better campus<br />starts with <span>speaking up.</span></h1>
+        <p class="hero-text">Welcome to BAC Connect — a simple place to report challenges, raise concerns, and help make our school a better place for everyone.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#report">Report a problem <span aria-hidden="true">→</span></a>
+          <a class="btn btn-secondary" href="#categories">Explore categories</a>
+        </div>
+        <div class="trust-line"><span class="check-circle">✓</span> Be heard. Be respectful. Make a difference.</div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of campus community">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="art-card art-card-main">
+          <div class="art-top"><span class="art-logo">B</span><span class="art-pill">BAC CONNECT</span></div>
+          <div class="art-illustration">
+            <div class="sun"></div><div class="building building-back"></div><div class="building building-front"><div class="windows"></div></div>
+            <div class="person person-one"><i></i><b></b></div><div class="person person-two"><i></i><b></b></div>
+            <div class="ground"></div>
+          </div>
+          <div class="art-bottom"><span class="status-dot"></span><span>Building a better BAC together</span></div>
+        </div>
+        <div class="floating-note note-one"><span class="note-icon">✓</span><span><strong>Report submitted</strong><small>Your voice matters</small></span></div>
+        <div class="floating-note note-two"><span class="note-icon note-blue">↗</span><span><strong>Take action</strong><small>One campus, one community</small></span></div>
+      </div>
+    </section>
+
+    <section class="stats-strip" aria-label="How the system works">
+      <div><span class="stat-icon">01</span><span><strong>Speak up</strong><small>Tell us what needs attention</small></span></div>
+      <div><span class="stat-icon">02</span><span><strong>Follow progress</strong><small>Track the status of your report</small></span></div>
+      <div><span class="stat-icon">03</span><span><strong>Make change</strong><small>Share feedback on the response</small></span></div>
+    </section>
+
+    <section class="section categories-section" id="categories">
+      <div class="section-heading">
+        <div><span class="eyebrow">WHAT CAN YOU REPORT?</span><h2>Choose a category</h2><p>From campus facilities to academic concerns, select the area that best fits your issue.</p></div>
+        <a href="#report" class="text-link">Make a report <span>→</span></a>
+      </div>
+      <div class="category-grid" id="categoryGrid">
+        <button class="category-card" data-category="Infrastructure"><span class="category-icon">⌂</span><strong>Infrastructure</strong><small>Classrooms, utilities, equipment and campus facilities</small><span class="card-arrow">↗</span></button>
+        <button class="category-card" data-category="Accommodation"><span class="category-icon">▤</span><strong>Accommodation</strong><small>Hostels, room conditions, water and residence issues</small><span class="card-arrow">↗</span></button>
+        <button class="category-card" data-category="Finance"><span class="category-icon">₵</span><strong>Finance</strong><small>Fees, payments, financial aid and account queries</small><span class="card-arrow">↗</span></button>
+        <button class="category-card" data-category="Student Relations"><span class="category-icon">♧</span><strong>Student Relations</strong><small>Respect, conduct, inclusion and student concerns</small><span class="card-arrow">↗</span></button>
+        <button class="category-card" data-category="Health"><span class="category-icon">✚</span><strong>Health</strong><small>Wellbeing, sanitation, safety and health services</small><span class="card-arrow">↗</span></button>
+        <button class="category-card" data-category="Academics"><span class="category-icon">▱</span><strong>Academics</strong><small>Timetables, teaching, assessments and learning resources</small><span class="card-arrow">↗</span></button>
+        <button class="category-card" data-category="Sports"><span class="category-icon">◎</span><strong>Sports</strong><small>Facilities, teams, equipment and sporting activities</small><span class="card-arrow">↗</span></button>
+      </div>
+    </section>
+
+    <section class="report-section" id="report">
+      <div class="section report-layout">
+        <div class="report-intro">
+          <span class="eyebrow">LET'S GET IT SORTED</span>
+          <h2>Tell us what<br />needs to change.</h2>
+          <p>Submit a quick report or provide a detailed letter. Add a document if it helps explain the issue.</p>
+          <div class="privacy-note"><span>ⓘ</span><p><strong>Share responsibly</strong><br />Please provide accurate information and avoid including unnecessary personal or sensitive details.</p></div>
+          <div class="report-mini-stat"><span class="mini-stat-icon">✎</span><span><strong>Every report counts</strong><small>Your feedback helps improve campus life.</small></span></div>
+        </div>
+        <div class="form-card">
+          <div class="form-card-header"><div><span class="eyebrow">NEW SUBMISSION</span><h3>Report a problem</h3></div><span class="required-note">* Required</span></div>
+          <form id="reportForm">
+            <div class="field-row">
+              <div class="field"><label for="reportTitle">Report title <span>*</span></label><input id="reportTitle" name="title" type="text" maxlength="100" placeholder="e.g. Broken lights in Block A" required /></div>
+              <div class="field"><label for="reportCategory">Category <span>*</span></label><select id="reportCategory" name="category" required><option value="">Choose a category</option><option>Infrastructure</option><option>Accommodation</option><option>Finance</option><option>Student Relations</option><option>Health</option><option>Academics</option><option>Sports</option></select></div>
+            </div>
+            <div class="field"><label>Report format <span>*</span></label><div class="format-options"><label class="format-option"><input type="radio" name="format" value="Flash card" checked /><span class="format-symbol">▤</span><span><strong>Quick report</strong><small>Short and direct</small></span></label><label class="format-option"><input type="radio" name="format" value="Formal letter" /><span class="format-symbol">▧</span><span><strong>Formal letter</strong><small>Detailed explanation</small></span></label></div></div>
+            <div class="field"><label for="reportDetails">Describe the problem <span>*</span></label><textarea id="reportDetails" name="details" rows="5" maxlength="3000" placeholder="What happened, where did it happen, and how does it affect students?" required></textarea><div class="field-foot"><small>Be clear and respectful. Maximum 3,000 characters.</small><small id="charCount">0 / 3000</small></div></div>
+            <div class="field"><label for="reportLocation">Location on campus</label><input id="reportLocation" name="location" type="text" maxlength="120" placeholder="e.g. Library, Block B, student residence" /></div>
+            <div class="field"><label for="reportFile">Attach a letter or supporting document (optional)</label><label class="upload-box" for="reportFile"><span class="upload-icon">↑</span><span><strong>Choose a Word or PDF file</strong><small>DOC, DOCX or PDF · Maximum 5 MB</small><span class="file-name" id="fileName">No file selected</span></span><input id="reportFile" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" /></label><p class="form-hint">Demo note: the attachment is checked in your browser but is not uploaded to a server.</p></div>
+            <div class="field-row">
+              <div class="field"><label for="reportName">Your name (optional)</label><input id="reportName" name="reporter" type="text" maxlength="100" placeholder="Enter your name" /></div>
+              <div class="field"><label for="reportEmail">Email for follow-up (optional)</label><input id="reportEmail" name="email" type="email" maxlength="150" placeholder="you@example.com" /></div>
+            </div>
+            <label class="check-field"><input id="confirmAccurate" type="checkbox" required /><span>I confirm that the information provided is accurate to the best of my knowledge.</span></label>
+            <button class="btn btn-primary submit-btn" type="submit">Submit report <span>→</span></button>
+            <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tracking-section" id="my-reports">
+      <div class="section-heading"><div><span class="eyebrow">KEEP UP TO DATE</span><h2>Reports & progress</h2><p>View demo submissions and follow their status. Use the role selector at the top to explore each view.</p></div><span class="demo-label">BROWSER DEMO</span></div>
+      <div class="dashboard-toolbar"><div class="role-description" id="roleDescription">Student view: view reports and their current status.</div><label class="search-box"><span>⌕</span><input type="search" id="reportSearch" placeholder="Search reports..." aria-label="Search reports" /></label></div>
+      <div class="reports-list" id="reportsList"></div>
+      <div class="empty-state" id="emptyState" hidden><span>⌕</span><strong>No reports found</strong><p>Try a different search or submit a new report.</p></div>
+    </section>
+
+    <section class="feedback-section" id="feedback">
+      <div class="section feedback-layout">
+        <div><span class="eyebrow">CLOSE THE LOOP</span><h2>Was your concern<br />handled well?</h2><p>Feedback helps the SRC and school management understand what is working and where responses can improve.</p></div>
+        <form class="feedback-card" id="feedbackForm">
+          <h3>Share your feedback</h3>
+          <p class="form-subtitle">Tell us about the response to your report.</p>
+          <div class="field"><label for="feedbackReport">Report reference</label><select id="feedbackReport"><option value="">Choose a report (optional)</option></select></div>
+          <div class="field"><label>How would you rate the response?</label><div class="rating-options" role="radiogroup" aria-label="Rate the response"><label><input type="radio" name="rating" value="1" required /><span>1</span><small>Poor</small></label><label><input type="radio" name="rating" value="2" /><span>2</span><small>Fair</small></label><label><input type="radio" name="rating" value="3" /><span>3</span><small>Okay</small></label><label><input type="radio" name="rating" value="4" /><span>4</span><small>Good</small></label><label><input type="radio" name="rating" value="5" /><span>5</span><small>Great</small></label></div></div>
+          <div class="field"><label for="feedbackMessage">Your comments <span>*</span></label><textarea id="feedbackMessage" rows="3" maxlength="1500" placeholder="What went well? What could be improved?" required></textarea></div>
+          <button class="btn btn-primary submit-btn" type="submit">Send feedback <span>→</span></button>
+          <p class="form-message" id="feedbackMessageStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section how-section">
+      <div class="section-heading"><div><span class="eyebrow">A COMMUNITY EFFORT</span><h2>Three roles. One goal.</h2></div></div>
+      <div class="role-grid">
+        <article class="role-card"><span class="role-number">01</span><span class="role-icon">♙</span><h3>Students</h3><p>Raise concerns, submit documents, track progress and give feedback.</p></article>
+        <article class="role-card"><span class="role-number">02</span><span class="role-icon">♧</span><h3>Student Representative Council</h3><p>Review incoming reports, coordinate follow-ups and refer issues to the right team.</p></article>
+        <article class="role-card"><span class="role-number">03</span><span class="role-icon">▥</span><h3>School Management</h3><p>Review assigned issues, update status and provide an official response.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-brand"><img src="logo.svg" alt="" /><span><strong>BAC CONNECT</strong><small>Better communication. Better campus.</small></span></div><p>Made for the BAC community <span>♥</span></p><a href="#home">Back to top ↑</a></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
